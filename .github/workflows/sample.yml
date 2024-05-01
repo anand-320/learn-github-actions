@@ -1,9 +1,12 @@
 name: learn-github-actions
 on: [push]
 jobs:
-  job1:
+  job_1:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: code checkout
+        uses: actions/checkout@v4
       - run: echo Hello World
-      - run: ls -Al
+        name: run echo command
+      - run: find .
+        name: list files
